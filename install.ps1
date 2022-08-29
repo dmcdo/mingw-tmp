@@ -7,5 +7,4 @@ cmd /c "mklink /H $env:USERPROFILE\release-posix-seh\mingw64\bin\make.exe $env:U
 $oldpath = (Get-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Environment').path
 $newpath = "$env:USERPROFILE\release-posix-seh\mingw64\bin;" + $oldpath
 Set-ItemProperty -Path 'Registry::HKEY_CURRENT_USER\Environment' -Name PATH -Value $newpath
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
-Write-Output "Done."
+Write-Output "Done. Log out and log back in for the changes to take full effect."
