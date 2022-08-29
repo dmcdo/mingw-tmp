@@ -8,6 +8,8 @@ Invoke-WebRequest -OutFile .\release-posix-seh.7z -URI "https://github.com/dmcdo
 
 You will need to log out and log back to be able to use gcc/g++/etc. from cmd/powershell.
 
+<hr/>
+
 If you are using VSCode with the C/C++ extension, add the following to your `settings.json` file,
 ```json
 "C_Cpp.default.compilerPath": "${userprofile}\\release-posix-seh\\mingw64\\bin\\g++.exe"
